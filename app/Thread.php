@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model
 {
-    //
+    
+
+	public function path()
+	{
+		return sprintf("/threads/%s", $this->id); 
+	}
+
 }
