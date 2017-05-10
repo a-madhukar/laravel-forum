@@ -13,4 +13,11 @@ class Thread extends Model
 		return sprintf("/threads/%s", $this->id); 
 	}
 
+
+
+	public function replies()
+	{
+		return $this->hasMany(Reply::class); 
+	}
+
 }
